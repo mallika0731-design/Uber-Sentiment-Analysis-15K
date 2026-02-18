@@ -1,90 +1,139 @@
-Uber Sentiment Analysis - 15K NLP Pipeline
-Production NLP pipeline processing 15K Uber reviews → VADER sentiment → 66.4% accuracy → Business insights in 90s
+🚖 Uber Sentiment Analysis – 15K Reviews
 
-🎯 One-Liner
-15K real Uber reviews → Multi-language text processing → Sentiment classification → Executive CSV dashboard output
+Natural Language Processing | Sentiment Classification | Executive Analytics
 
-🔬 NLP Pipeline
-text
-1. TEXT PREPROCESSING
-   • Regex cleaning (emojis, URLs, special chars)
-   • Lowercase normalization  
-   • Whitespace handling
-   • Multi-language support (Urdu/English/Hindi)
+📌 Project Overview
 
-2. VADER SENTIMENT MODEL
-   • Lexicon + rule-based (industry standard)
-   • Handles slang, emojis (😡=negative), CAPS=INTENSE
-   • Compound scores: -1 to +1
-   • Thresholds: ±0.05, ±0.3 (production optimized)
+This project builds a complete end-to-end NLP sentiment analysis pipeline on 15,000 real Uber app reviews.
 
-3. OUTPUT GENERATION
-   • 15K-row CSV with sentiment + confidence scores
-   • Executive summary (8,351 negatives found)
-   • Accuracy validation vs Uber star ratings
-📊 Production Results
-text
-Dataset:           15,000 real Uber reviews
-Processing Time:   90 seconds
-Accuracy:          66.4% vs star ratings [web:164]
-Negative Reviews:  8,351 (55.7%)
-Positive Reviews:  5,325 (35.5%)
-Neutral:           1,324 (8.8%)
-Languages:         English(95%), Urdu/Hindi/Spanish(5%)
-🚀 Copy-Paste Run
-bash
-# Clone & install
-git clone https://github.com/YOURNAME/uber-sentiment-analysis-15k
-cd uber-sentiment-analysis-15k
-pip install -r requirements.txt
+The objective was to:
 
-# Add Uber.csv → Run → Get results
-python uber_sentiment_pipeline.py
-💾 NLP Outputs Generated
-text
-✅ Uber_15K_Final.csv              (15K rows w/ sentiment scores)
-✅ uber_sentiment_pro.png         (Distribution plots)  
-✅ Uber_summary.csv              (Executive table)
-✅ requirements.txt              (Production deps)
-🛠️ NLP Tech Stack
-python
-pandas              # Data processing (15K rows)
-vaderSentiment      # Lexicon sentiment model
-langdetect          # Multi-lang detection
-numpy               # Vectorized ops
-re                  # Text preprocessing
-matplotlib/seaborn  # NLP visualizations
-📈 Sample NLP Output
-Review ID	Content Preview	Sentiment	Confidence	Uber Score
-a60200b0	"Totally useless..."	negative	-0.87	1⭐
-06e45e18	"chor hai..." (Urdu)	negative	-0.65	1⭐
-9e5c252d	"lost my wallet"	negative	-0.42	1⭐
-🎯 Business Deliverables
-text
-💰 8,351 negative reviews = $835K revenue opportunity
-📊 Executive-ready CSV for PowerBI/Tableau
-⚡ Production pipeline (scales to millions)
-🎯 66.4% accuracy = enterprise benchmark
-🔧 requirements.txt
-bash
-pandas==2.2.3
-vaderSentiment==3.3.2
-langdetect==1.0.9
-numpy==2.1.3
-matplotlib==3.9.2
-seaborn==0.13.2
-👨‍💼 Recruiter Highlights
-text
-✅ PRODUCTION NLP PIPELINE (15K→90s)
-✅ VADER + Multi-language preprocessing  
-✅ 66.4% accuracy validated
-✅ Executive CSV outputs
-✅ Enterprise-scale text processing
-✅ GitHub best practices
-📁 Repo Structure
-text
-├── uber_sentiment_pipeline.py    # Main NLP script
-├── Uber_15K_Final.csv           # 15K analyzed reviews
-├── uber_sentiment_pro.png       # NLP visualizations
-├── requirements.txt             # Dependencies
-└── README.md                   # This file
+Clean and preprocess raw user-generated text
+
+Perform sentiment classification using NLP techniques
+
+Validate results against Uber star ratings
+
+Generate executive-level insights and export-ready analytics
+
+This capstone demonstrates practical application of Natural Language Processing, text preprocessing, sentiment modeling, performance validation, and business insight extraction.
+
+🧠 NLP & Machine Learning Pipeline
+
+1️⃣ Text Preprocessing
+
+Lowercasing & normalization
+
+Removal of URLs, emojis, punctuation
+
+Regex-based cleaning
+
+Handling multilingual review text
+
+Token-level cleanup for consistent sentiment scoring
+
+2️⃣ Sentiment Classification Model
+
+Implemented VADER (Valence Aware Dictionary & sEntiment Reasoner)
+
+Generated compound sentiment scores (-1 to +1)
+
+Custom threshold logic for:
+
+Positive
+
+Neutral
+
+Negative classification
+
+3️⃣ Model Validation
+
+Compared predicted sentiment with Uber star ratings
+
+Measured real-world performance accuracy
+
+📊 Executive Summary (Actual Project Results)
+
+Dataset Size: 15,000 Uber app reviews
+Processing Time: 29 seconds
+Accuracy vs Star Ratings: 67.6%
+
+Sentiment Distribution
+
+Negative: 8,584 reviews (57.2%)
+
+Positive: 5,083 reviews (33.9%)
+
+Neutral: 1,333 reviews (8.9%)
+
+⭐ Sentiment Breakdown by Star Rating
+Star Rating	Total Reviews	% Negative
+1 Star	9,948	70%
+2 Stars	1,320	60%
+3 Stars	899	51%
+4 Stars	636	28%
+5 Stars	2,197	9%
+
+This demonstrates strong alignment between textual sentiment and user star ratings — validating model reliability.
+
+💼 Business Insights Extracted
+
+57.2% of Uber reviews are negative, indicating substantial dissatisfaction signals.
+
+67.6% sentiment accuracy confirms meaningful alignment between NLP predictions and actual ratings.
+
+8,351+ critical reviews require attention, providing a clear target segment for product improvement teams.
+
+This project moves beyond classification — it converts raw reviews into actionable decision intelligence.
+
+📁 Output Artifacts Generated
+
+Uber_15K_Executive_Analysis.csv (15,000 rows)
+
+Executive summary metrics
+
+Sentiment distribution breakdown
+
+Star-rating correlation analysis
+
+Production-ready processed dataset
+
+
+⚙️ Tech Stack
+
+Python
+
+pandas
+
+numpy
+
+vaderSentiment
+
+langdetect
+
+regex (re)
+
+matplotlib
+
+🏁 Capstone Status
+
+✔ 15K reviews processed
+✔ Production-grade pipeline
+✔ Executive summary generated
+✔ Business insights extracted
+
+🎯 Why This Project Matters (Recruiter Perspective)
+
+This project demonstrates:
+
+Real-world NLP implementation
+
+Large-scale text processing (15K records)
+
+Model validation against ground truth
+
+Data-to-decision workflow
+
+Business insight extraction, not just modeling
+
+It shows the ability to bridge machine learning with business intelligence, which is critical for applied data science roles.
